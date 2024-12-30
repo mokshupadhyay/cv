@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 100%);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.quiz-container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  overflow: hidden;
+}
+
+.quiz-header {
+  padding: 2rem;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.progress-bar {
+  background-color: #e0e0e0;
+  height: 10px;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+}
+
+#progress {
+  background-color: #8e44ad;
+  height: 10px;
+  border-radius: 5px;
+  transition: width 0.3s ease-in-out;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+ul li label {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+ul li input[type='radio']:checked + label {
+  background-color: #dcd6f7;
+  color: #5e3370;
+  font-weight: bold;
+}
+
+button {
+  background-color: #8e44ad;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  width: 100%;
+  font-size: 1.2rem;
+  border-radius: 0 0 10px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #732d91;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Same base styles as before, with these additions */
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#timer {
+  font-size: 1rem;
+  color: #8e44ad;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+#hint {
+  background-color: #3498db;
+}
+
+#hint:hover {
+  background-color: #2980b9;
+}
+
+.leaderboard {
+  display: none;
+  text-align: center;
+}
+
+.leaderboard h2 {
+  margin-bottom: 1rem;
+}
+
+.leaderboard ul {
+  list-style: none;
+  padding: 0;
+}
+
+
+/* Dropdown styles */
+select {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  appearance: none;
+  outline: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 140'%3E%3Cpolygon fill='%238e44ad' points='70,105 140,35 0,35'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 12px;
+}
+
+select:focus {
+  border-color: #8e44ad;
+  box-shadow: 0 0 5px rgba(142, 68, 173, 0.5);
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+input[type="number"]:focus {
+  border-color: #8e44ad;
+  box-shadow: 0 0 5px rgba(142, 68, 173, 0.5);
+}
+
+/* Button styling for the Start Quiz */
+button#start-btn {
+  margin-top: 1rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  background-color: #8e44ad;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+button#start-btn:hover {
+  background-color: #732d91;
+}
+
+button#start-btn:active {
+  transform: scale(0.98);
+}
