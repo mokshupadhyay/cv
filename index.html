@@ -1,79 +1,72 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Advanced Quiz App</title>
+  </head>
+  <body>
+    <div class="start-container">
+      <h1>Welcome to the Advanced Quiz</h1>
+      <h3>Select a Category:</h3>
+      <select id="category-select">
+        <option value="web-dev">Web Development</option>
+        <option value="general-knowledge">General Knowledge</option>
+        <option value="programming">Programming</option>
+      </select>
+      <h3>Select Difficulty:</h3>
+      <select id="difficulty-select">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+      <h3>Set Timer (seconds):</h3>
+      <input type="number" id="custom-timer" value="15" min="5" max="60" />
+      <button id="start-btn">Start Quiz</button>
+    </div>
 
-<head>
-  <meta charset="utf-8">
-  <title> 💚 Moksh personal site</title>
+    <div class="quiz-container" id="quiz" style="display: none;">
+      <div class="quiz-header">
+        <h2 id="question">Question text</h2>
+        <div class="info">
+          <p>Question <span id="current-question">1</span>/<span id="total-questions">10</span></p>
+          <p id="timer">Time left: <span id="time">15</span>s</p>
+        </div>
+        <ul>
+          <li>
+            <input type="radio" name="answer" id="a" class="answer" />
+            <label for="a" id="a_text">Answer A</label>
+          </li>
+          <li>
+            <input type="radio" name="answer" id="b" class="answer" />
+            <label for="b" id="b_text">Answer B</label>
+          </li>
+          <li>
+            <input type="radio" name="answer" id="c" class="answer" />
+            <label for="c" id="c_text">Answer C</label>
+          </li>
+          <li>
+            <input type="radio" name="answer" id="d" class="answer" />
+            <label for="d" id="d_text">Answer D</label>
+          </li>
+        </ul>
+      </div>
+      <div class="buttons">
+        <button id="lifeline-50">50:50</button>
+        <button id="skip">Skip</button>
+        <button id="submit">Submit</button>
+      </div>
+    </div>
 
-</head>
+    <div class="summary-container" id="summary" style="display: none;">
+      <h2>Quiz Summary</h2>
+      <p>You scored <span id="final-score"></span>!</p>
+      <p>Category: <span id="summary-category"></span></p>
+      <p>Difficulty: <span id="summary-difficulty"></span></p>
+      <button onclick="location.reload()">Restart Quiz</button>
+    </div>
 
-<body style="background-color:powderblue">
-  <table cellSpacing="20">
-    <tr>
-      <td><img src="mokshupadhyayprofilepicture.png"length="200"width="300" alt="Moksh profile picture">
-      </td>
-      <td>
-        <h1>Moksh Upadhyay</h1>
-        <p> <em>Studying B.Tech from <strong>KCC Institutes of Technology and Management </strong></em></p>
-        <p>I am learning Web Developement , I love to watch Animes </p>
-    </td></tr>
-  </table>
-<hr>
-
-  <h3>Aims and Goals </h3>
-  <ul>
-    <li> To Complete the Web Developement Course </li>
-    <li> To Complete the App Developement Course </li>
-  </ul>
-  <hr>
-  <h3>Educational Qualification</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>Class</th>
-        <th>Year</th>
-        <th>percentage</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>10</td>
-        <td>2019</td>
-        <td>83.4</td>
-      </tr>
-      <tr>
-        <td>12</td>
-        <td>2021</td>
-        <td>81</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3>Skills</h3>
-  <table>
-    <tr>
-      <th>
-        <td> Python </td>
-        <td>⭐⭐⭐⭐</td>
-      </th>
-      <th>
-        <td> C </td>
-        <td>⭐⭐⭐</td>
-      </th>
-    </tr>
-    <tr>
-      <th>
-          <td>Writer</td>
-          <td>⭐⭐⭐⭐</td>
-      </th>
-      <th>
-         <td>Singing</td>
-         <td>⭐⭐</td>
-      </th>
-    </tr>
-  </table>
-  <hr>
-  <a href="hobbies.html">MY HOBBIES</a>
-  <a href="contact.html">My contact details</a>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
